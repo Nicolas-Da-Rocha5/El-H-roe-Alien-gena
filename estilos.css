@@ -37,8 +37,13 @@ body{
 	  display: flex;
 	  align-items: center;
 	  justify-content: space-between;
-	  padding: 0 20px;
+	  padding: 0 15px;
 	  box-sizing: border-box;
+	  overflow: hidden;
+	  gap: 8px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
 	}
 	
 	.icon-toggle {
@@ -59,11 +64,18 @@ body{
 	
 	.logo {
 		font-family:"Space Comics";
-		font-size: 26px;
+		font-size: clamp(16px, 4.5vw, 26px);
 		color: #ccff14;
 		text-shadow: 0 0 8px #17fc03, 0 0 15px #17fc03;
 		letter-spacing: 1.5px;
 		margin:auto;
+		text-overflow: ellipsis;
+		max-width: 70%;
+		flex:1;
+		white-space: normal;
+		word-break: break-word;
+		line-height: 1.4;
+		word-spacing: 0.5px;
 	}
 	
 /* Sidebar */
@@ -1319,6 +1331,10 @@ h2{
 	
 	/* Header y Footer */
 
+		header {
+			padding: 0 10px;
+		}
+
 	  .sidebar {
 		width: 100vw;
 		transform: translateX(-100vw);
@@ -1354,7 +1370,7 @@ h2{
 	  }
 
 	  :root {
-		--header-height: 65px;
+		--header-height: 78px;
 	  }
 
 	  .icon-toggle {
@@ -1362,12 +1378,12 @@ h2{
 	  }
 
 	  .logo {
-		width:100%;
-		height:auto;
-		letter-spacing:10px;
-		font-size: 15px;
-		margin-left:35px;
-		padding:1%;
+		font-size: clamp(14px, 4vw, 18px);
+		letter-spacing: 0.5px;
+		max-width: 65%;
+		margin-left: 10px;
+		font-size: clamp(13px, 3.8vw, 18px);
+		line-height: 1.7;
 	  }
 
 	  .sidebar-footer p{
@@ -1497,6 +1513,7 @@ h2{
 				text-align:center;
 				font-size:20px;
 				line-height:25px;
+				letter-spacing:10px;
 			}
 			
 			.listas{
